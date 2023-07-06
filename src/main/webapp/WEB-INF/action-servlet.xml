@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/jdbc
+        http://www.springframework.org/schema/jdbc/spring-jdbc.xsd"
+        >
+
+	<context:component-scan base-package="aisw" />
+
+	<!-- 모델앤뷰에 dao서비스 등록하기 -->
+<!-- 	<bean id="daoService" class="common.DAOServiceFactory" factory-method="getInstance"/> -->
+<!-- 	<bean id="daoService" class="common.DAOService"></bean> -->
+
+	<!-- 여기서의 id는 path임. URL/ -->
+<!-- 	<bean id="/qna" class="controller.NoticeController"> -->
+<!-- 		<constructor-arg ref="daoService"></constructor-arg> -->
+<!-- 	</bean> -->
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+    <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+    <property name="username" value="hr" />
+    <property name="password" value="hr" />
+</bean>
+
+
+	<!-- assets라는 경로에 있는 모든 리소스에 대해 허락. 근데 mvc:resources를 정의를 해줘야 사용가능. -->
+	<mvc:resources location="/assets/" mapping="/**"></mvc:resources>
+	<mvc:annotation-driven/>
+</beans>
