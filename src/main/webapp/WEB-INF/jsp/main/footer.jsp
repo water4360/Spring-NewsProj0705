@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 	rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/styles.css" rel="stylesheet" />
+<!-- <link href="css/news-styles.css" rel="stylesheet" /> -->
 
 <%-- 지도용 --%>
 <script type="text/javascript"

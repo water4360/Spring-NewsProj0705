@@ -1,8 +1,5 @@
 package aisw.board;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -47,6 +44,7 @@ public class PostDAO {
 	}
 
 	
+	
 	////////// Q&A 업데이트
 	public void modifyPost(PostVO post) {
 		StringBuilder sql = new StringBuilder();
@@ -54,7 +52,11 @@ public class PostDAO {
 		
 		JdbcTemplate template = new JdbcTemplate();
 		template.setDataSource(dataSource);
+		
+		template.update(sql.toString(), post.getP_title(), post.getP_contents(), post.getP_no());
 	}
+	
+	
 	
 	/////////뉴스 등록
 	public void write(PostVO post) {
@@ -69,7 +71,15 @@ public class PostDAO {
 	}
 	
 	
-	
+	//뉴스 삭제
+		public void delete(int no) {
+			StringBuilder sql = new StringBuilder();
+			sql.append("DELETE NEWS_BOARD WHERE P_NO = ? ");
+			
+			JdbcTemplate template = new JdbcTemplate();
+			template.setDataSource(dataSource);
+			template.update(sql.toString(), no);
+		}
 	
 	
 	

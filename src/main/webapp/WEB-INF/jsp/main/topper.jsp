@@ -8,7 +8,7 @@
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
 <!-- 여기는 topper 스타일시트 -->
-<link href="/css/styles.css" rel="stylesheet" />
+<link href="/css/news-styles.css" rel="stylesheet" />
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
 	crossorigin="anonymous">
@@ -49,7 +49,7 @@
 		style="flex-direction: column;">
 		<div class="container">
 			<a class="navbar-brand"
-				href="${pageContext.request.contextPath}/main.do"> <img
+				href="${pageContext.request.contextPath}/news"> <img
 				alt="main-bank-logo" src="bank-logo.png" width="80%"></a>
 			<div class="info-and-topmenu"
 				style="display: flex; flex-direction: column; align-items: flex-end;">
@@ -67,10 +67,6 @@
 						align="center">
 						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 							<li class="nav-item"><a class="nav-link" href="inquiry.do">조회</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="inquiryOpenbank.do">오픈뱅킹</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="transaction.do">이체</a></li>
 							<li class="nav-item"><a class="nav-link" href="products.do">금융상품</a></li>
 							<li class="nav-item"><a class="nav-link" href="customer.do">고객센터</a></li>
 							<li class="nav-item"><a class="nav-link" href="mypage.do">마이페이지</a></li>

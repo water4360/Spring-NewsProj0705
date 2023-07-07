@@ -47,8 +47,8 @@ table {
 					</div>
 					<div class="btn-group" role="group">
 						<%-- 작성자일때, 관리자일때, 방문자일때 --%>
-							<a href="modifyPost?no=${news.p_no}" class="btn btn-secondary mb-2">수정</a>
-							<a href="deletePost?no=${news.p_no}" class="btn btn-secondary mb-2">삭제</a>
+							<a href="modifyPost?p_no=${news.p_no}" class="btn btn-secondary mb-2">수정</a>
+							<a href="delete-news?p_no=${news.p_no}" class="btn btn-secondary mb-2">삭제</a>
 							<a href="${pageContext.request.contextPath }/news"
 								class="btn btn-secondary mb-2">목록으로</a>
 					</div>
