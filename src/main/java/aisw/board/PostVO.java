@@ -60,6 +60,14 @@ public class PostVO {
 		this.p_hit = p_hit;
 	}
 
+	@Override
+	public String toString() {
+		return "PostVO [p_category=" + p_category + ", p_no=" + p_no + ", p_writer=" + p_writer + ", p_title=" + p_title
+				+ ", p_contents=" + p_contents + ", p_reg_Date=" + p_reg_Date + ", p_hit=" + p_hit + "]";
+	}
+	
+	
+
 
 //	//신규생성용
 //	public PostVO(int no, String writer, String title, String contents, String regDate, int viewCnt) {

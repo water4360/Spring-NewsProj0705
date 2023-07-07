@@ -43,6 +43,9 @@
 					<input type="text" class="form-control" name="p_title"
 						placeholder="제목을 입력해 주세요.">
 				</div>
+<!-- 				<div class="mb-3"> -->
+<!-- 					<input type="file" class="form-control" name="p_image"> -->
+<!-- 				</div> -->
 				<div class="mb-3">
 					<textarea class="form-control" name="p_contents" rows="10"
 						placeholder="내용을 입력하세요."></textarea>

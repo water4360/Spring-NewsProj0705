@@ -81,6 +81,44 @@
 		</div>
 		
 		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".dropdown-item").click(function(e){
+    e.preventDefault();
+    var newsType = $(this).text();
+    if(newsType == '빵미일보'){
+      $.ajax({
+        url: 'http://172.31.9.176:8080/WebProj/boardlistApi',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          var tbody = $('table tbody');
+          tbody.empty();
+            
+          $.each(data, function(index, post) {
+            var row = $('<tr>');
+            row.append('<td>' + post.postNo + '</td>');
+            row.append('<td><a href="news-details?p_no=' + post.postNo + '">' + post.postTitle + '</a></td>');
+            row.append('<td>' + post.userId + '</td>');
+            row.append('<td>' + post.postRegDate + '</td>');
+            row.append('<td>' + post.postHit + '</td>');
+            row.append('<td><a href="delete-news?p_no=' + post.postNo + '" class="btn btn-secondary mb-2">삭제</a></td>');
+            tbody.append(row);
+          });
+        },
+        error: function(error) {
+          console.log('Error: ', error);
+        }
+      });
+    }
+  });
+});
+</script>
+
+
+		
+		
 		
 		
 

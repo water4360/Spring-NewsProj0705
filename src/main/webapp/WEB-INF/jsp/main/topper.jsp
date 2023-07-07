@@ -25,6 +25,20 @@
 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
 
 
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
 
 <%-- 서체용 --%>
 <link
@@ -54,8 +68,7 @@
 			<div class="info-and-topmenu"
 				style="display: flex; flex-direction: column; align-items: flex-end;">
 				<div class="login-info"
-					style="padding-right: 8px; font-size: large;">
-				</div>
+					style="padding-right: 8px; font-size: large;"></div>
 				<div class="topmenu-container" align="center">
 					<button class="navbar-toggler" type="button"
 						data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -63,15 +76,18 @@
 						aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent"
-						align="center">
-						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-							<li class="nav-item"><a class="nav-link" href="inquiry.do">조회</a></li>
-							<li class="nav-item"><a class="nav-link" href="products.do">금융상품</a></li>
-							<li class="nav-item"><a class="nav-link" href="customer.do">고객센터</a></li>
-							<li class="nav-item"><a class="nav-link" href="mypage.do">마이페이지</a></li>
-						</ul>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button"
+							id="dropdownMenuButton" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">언론사 선택</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="${pageContext.request.contextPath}/news">하리일보</a>
+							<a class="dropdown-item" href="#">조이일보</a>
+							<a class="dropdown-item" href="#">빵미일보</a>
+							<a class="dropdown-item" href="#">레베카바보</a>
+						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>

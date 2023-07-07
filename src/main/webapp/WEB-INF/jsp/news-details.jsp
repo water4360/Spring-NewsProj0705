@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>HB하리은행 - 문의게시판(Q&A)</title>
+<title>HB하리은행 - 기사보기</title>
 
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
@@ -47,7 +47,7 @@ table {
 					</div>
 					<div class="btn-group" role="group">
 						<%-- 작성자일때, 관리자일때, 방문자일때 --%>
-							<a href="modifyPost?p_no=${news.p_no}" class="btn btn-secondary mb-2">수정</a>
+							<a href="update-news?p_no=${news.p_no}" class="btn btn-secondary mb-2">수정</a>
 							<a href="delete-news?p_no=${news.p_no}" class="btn btn-secondary mb-2">삭제</a>
 							<a href="${pageContext.request.contextPath }/news"
 								class="btn btn-secondary mb-2">목록으로</a>
